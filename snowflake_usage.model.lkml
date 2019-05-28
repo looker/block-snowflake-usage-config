@@ -4,7 +4,7 @@ connection: "@{CONNECTION_NAME}"
 include: "*.view"
 
 # include all the dashboards
-include: "//block-snowflake-usage/account_usage_dashboard.dashboard.lookml"
+include: "//block-snowflake-usage/*.dashboard.lookml"
 include: "//block-snowflake-usage/*.view"
 include: "//block-snowflake-usage/*.explore"
 
