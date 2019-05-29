@@ -1,12 +1,12 @@
 connection: "@{CONNECTION_NAME}"
 
-# include all the views
-include: "*.view"
+# # include all the views
+# include: "*.view"
 
-# include all the dashboards
-include: "//block-snowflake-usage/*.dashboard.lookml"
-include: "//block-snowflake-usage/*.view"
-include: "//block-snowflake-usage/*.explore"
+# # include all the dashboards
+# include: "//block-snowflake-usage/*.dashboard.lookml"
+# include: "//block-snowflake-usage/*.view"
+# include: "//block-snowflake-usage/*.explore"
 
 datagroup: snowflake_usage_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
