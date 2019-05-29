@@ -1,4 +1,4 @@
-connection: "@{CONNECTION_NAME}"
+# connection: "@{CONNECTION_NAME}"
 
 # # include all the views
 # include: "*.view"
