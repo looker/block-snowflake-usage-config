@@ -5,6 +5,10 @@ project_name: "block-snowflake-usage-config"
 #   ref: "87f25aca8ef326216388bfc9948d8c3c4109ab94"
 # }
 
-# local_dependency: {
-#   project: "block-snowflake-usage"
-# }
+local_dependency: {
+  project: "block-snowflake-usage"
+}
+
+constant: CONNECTION_NAME {
+  value: "block-snowflake-usage"
+}
