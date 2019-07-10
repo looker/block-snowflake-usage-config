@@ -10,5 +10,5 @@ local_dependency: {
 }
 
 constant: CONNECTION_NAME {
-  value: "block-snowflake-usage"
+  value: "block-snowflake-usage-generated"
 }
