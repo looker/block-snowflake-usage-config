@@ -1,12 +1,17 @@
-# connection: "@{CONNECTION_NAME}"
-
-# # include all the views
+# include all the views
 include: "*.view"
 
-# # include all the dashboards
-# include: "//block-snowflake-usage/*.dashboard.lookml"
-# include: "//block-snowflake-usage/*.view"
-# include: "//block-snowflake-usage/*.explore"
+datagroup: snowflake_usage_default_datagroup {
+  # sql_trigger: SELECT MAX(id) FROM etl_log;;
+  max_cache_age: "1 hour"
+}
+
+named_value_format: conditional_to_millions {
+  value_format: "[>=1000000]0,,\"M\";[>=1000]0,\"K\";0"
+}
+
+persist_with: snowflake_usage_default_datagroup
+
 
 explore: login_history_config {
   extends: [login_history_core]
